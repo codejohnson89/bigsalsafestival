@@ -1,0 +1,55 @@
+@import '../../Utils/mixins.scss';
+
+.navbar {
+    background-color: #010101 !important;
+    .container {
+        .navbar-collapse {
+            @include xsDevice {
+                margin-left: 0;
+            }
+
+            @include smDevice {
+                margin-left: 0;
+            }   
+            margin-left: 5em;
+
+            .navbar-nav {
+                gap: 1em;
+                align-items: center;
+
+                >.nav-link {
+                    color: #fff !important;
+                    font-size: 1.2em;
+                    font-weight: 500;
+                    padding: 0.5em 0.5em;
+                    transition: all 0.3s ease-in-out;
+                    &:hover {
+                        color: #fff !important;
+                        background-color: #000 !important;
+                    }
+                }
+
+                @include xsDevice {
+                    gap: 0;
+                }
+
+                @include smDevice {
+                    gap: 0;
+                }
+                .nav-item {
+                    .nav-link {
+                        color: #fff !important;
+                        font-size: 1.2em;
+                        font-weight: 500;
+                        padding: 0.5em 0.5em;
+                        transition: all 0.3s ease-in-out;
+                        &:hover {
+                            color: #fff !important;
+                            background-color: #000 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
