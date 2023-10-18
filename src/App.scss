@@ -1,6 +1,36 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import './Utils/forms.scss';
+@import '../node_modules/react-vertical-timeline-component/style.min.css';
 
 body {
+    .homeContainer {
+        .homeJumbotron {
+            background-image: url('./Assets/sdBackground.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
 
+                .buttonContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: row;
+                    gap: 1.5rem;
+
+                    .customBtn {
+                        min-width: 145px;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -3,6 +3,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import './styles.scss';
 import PassGroupCards from '../PassGroupCards';
 import Proptypes from 'prop-types';
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
 export default function PerformerContent(props) {
     return (
@@ -55,7 +56,7 @@ export default function PerformerContent(props) {
                 <p>Kids must be under the age of 12 to purchase the kids performance pass. Kids must be present at registration to pick up their performer pass. PARENTS must purchase FULL PASS if they wish to accompany their children during workshops and/or tech rehearsal. It is the INSTRUCTORS RESPONSIBILITY to watch over kids during tech rehearsal. We strongly suggest instructors with large kid teams to encourage parents who want to partake in the full experience with their kids to purchase a full pass. Tech rehearsal and workshops are only available for performers and full pass purchasers, NO EXCEPTIONS.</p>
                 <h3>PERFORMERS PASS PURCHASE TIMELINE</h3>
                 <PassGroupCards data={props.kidPrices} />
-                <h3>PERFORMERS PASS PURCHASE TIMELINE</h3>
+                <h3>ADULT PERFORMERS PASS PURCHASE TIMELINE</h3>
                 <PassGroupCards data={props.adultPrices} />
                 <p>By completing the team registration you agree and acknowledge the above.</p>
                 <p>***ONLY REGISTER ONCE PER TEAM****</p>

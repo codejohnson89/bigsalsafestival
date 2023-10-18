@@ -13,6 +13,13 @@ export default function Jumbotron(props) {
                     <LinkContainer to={props.registerLink}>
                         <Button variant="primary" size="lg" className="registerButton">Register</Button>
                     </LinkContainer>
+                    {/* {
+                            props.hotel ? 
+                            <LinkContainer to={props.hotelLink}>
+                                <Button variant="primary" size="lg" className="registerButton">Hotel</Button> 
+                            </LinkContainer>
+                            : <></>
+                        } */}
                 </Container>
             </div>
         </>
@@ -20,6 +27,8 @@ export default function Jumbotron(props) {
 }
 
 Jumbotron.propTypes = {
-    headerText: PropsType.string.isRequired,
-    registerLink: PropsType.string.isRequired
+    headerText: PropsType.string,
+    registerLink: PropsType.string.isRequired,
+    hotel: PropsType.bool,
+    hotelLink: PropsType.string
 }
