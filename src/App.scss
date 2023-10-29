@@ -4,12 +4,17 @@
 
 body {
     .homeContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 2rem;
         .homeJumbotron {
             background-image: url('./Assets/sdBackground.jpg');
             background-size: cover;
             background-attachment: fixed;
             width: 100%;
-            height: 100vh;
+            height: 90vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -19,15 +24,23 @@ body {
                 align-items: center;
                 flex-direction: column;
 
-                .buttonContainer {
+                .row {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    flex-direction: row;
-                    gap: 1.5rem;
+                    flex-direction: column;
+                    gap: 1rem;
 
-                    .customBtn {
-                        min-width: 145px;
+                    .buttonContainer {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: row;
+                        gap: 1.5rem;
+    
+                        .customBtn {
+                            min-width: 145px;
+                        }
                     }
                 }
             }

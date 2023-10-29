@@ -1,3 +1,12 @@
+// Note: This file is used to store all the content for the website
+import houstLogo from '../../Assets/bighouLogo.webp';
+import nyLogo from '../../Assets/bignycLogo.webp';
+import sdLogo from '../../Assets/bigSalsaFestivalSDlogo.webp';
+import sdBG from '../../Assets/sdBG.webp';
+import nyBG from '../../Assets/nyBG.webp';
+import houstBG from '../../Assets/houBG.webp';
+
+
 export const NewYorkKidsPrices = [
     {
         price: 70,
@@ -43,5 +52,29 @@ export const NewYorkAdultPrices = [
         type: 'At the Door',
         position: 'right',
         age: 'Adult'
+    }
+]
+
+export const HomeCards = [
+    {
+        bgImg: houstBG,
+        logo: houstLogo,
+        date: 'Sept 2nd -5th',
+        weekend: 'Labor Day Weekend',
+        link: '/houston'
+    },
+    {
+        bgImg: nyBG,
+        logo: nyLogo,
+        date: 'May 26th - 29th',
+        weekend: 'Memeroial Day Weekend',
+        link: '/newyork'
+    },
+    {
+        bgImg: sdBG,
+        logo: sdLogo,
+        date: 'Jan 13th - 16th',
+        weekend: 'Martin Luther King Weekend',
+        link: '/sandiego'
     }
 ]
