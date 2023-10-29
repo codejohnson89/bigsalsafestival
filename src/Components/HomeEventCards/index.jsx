@@ -26,8 +26,8 @@ export default function HomeEventCards () {
                                         <Card.Text>{card.weekend}</Card.Text>
                                     </div>
                                     <div className={styles.buttonContainer}>
-                                        <LinkContainer to="/register">
-                                            <Button variant="primary" size="lg" className="registerButton customBtn">Purchase Pass</Button>
+                                        <LinkContainer to={card.link}>
+                                            <Button variant="primary" size="lg" className="registerButton customBtn">View event</Button>
                                         </LinkContainer>
                                     </div>
                                 </Card.ImgOverlay>
