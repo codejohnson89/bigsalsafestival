@@ -1,3 +1,5 @@
+@import '../../Utils/mixins.scss';
+
 .cardEvents {
     display: flex;
     flex-direction: column;
@@ -14,6 +16,14 @@
     .cardGroup {
         display: flex;
         gap: 1rem;
+
+        @include smDevice {
+            flex-direction: column;
+        }
+
+        @include xsDevice {
+            flex-direction: column;
+        }
         .event {
             border-radius: 15px !important;
     
