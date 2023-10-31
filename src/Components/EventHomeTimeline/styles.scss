@@ -1,0 +1,23 @@
+@import "../../Utils/mixins.scss";
+
+.vertical-timeline {
+    @include smDevice {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    @include xsDevice {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.timelineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
