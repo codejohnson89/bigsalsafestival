@@ -1,7 +1,7 @@
 import { Container, Button } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap';
 import PropsType from 'prop-types';
 import './styles.scss';
+import { Link } from 'react-router-dom';
 
 export default function EventHomeJumbotron(props) {
     return (
@@ -11,9 +11,9 @@ export default function EventHomeJumbotron(props) {
                     <div className='logoContainer'>
                         <img src={props.logo} alt="logo" className="logo" />
                     </div>  
-                    <LinkContainer to={props.hotelLink}>
+                    <Link target='_blank' to={props.hotelLink}>
                         <Button variant="primary" size="lg" className="registerButton">Purchase Pass</Button>
-                    </LinkContainer>
+                    </Link>
                 </Container>
             </div>
         </>

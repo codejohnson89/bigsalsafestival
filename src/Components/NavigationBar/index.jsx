@@ -22,12 +22,8 @@ export default function NavigationBar () {
                     <Navbar.Collapse id="appNavBar">
                         <Nav className="me-auto">
                         <NavDropdown title="New York" id="NewYork">
-                            <LinkContainer to="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">
-                                <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="https://book.passkey.com/event/50552668/owner/6708/home">
-                                <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
-                            </LinkContainer>
+                                <NavDropdown.Item target='_blank' href="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">Purchase Pass</NavDropdown.Item>
+                                <NavDropdown.Item target='_blank' href="https://book.passkey.com/event/50552668/owner/6708/home">Book Hotel</NavDropdown.Item>
                             {/* <LinkContainer to="/NewYork/perform">
                                 <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
                             </LinkContainer> */}
@@ -42,12 +38,8 @@ export default function NavigationBar () {
                             </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="San Diego" id="SanDiego">
-                            <LinkContainer to="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">
-                                <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="https://book.passkey.com/event/50552668/owner/6708/home">
-                                <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
-                            </LinkContainer>
+                                <NavDropdown.Item target='_blank' href="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">Purchase Pass</NavDropdown.Item>
+                                <NavDropdown.Item target='_blank' href="https://book.passkey.com/event/50552668/owner/6708/home">Book Hotel</NavDropdown.Item>
                             {/* <LinkContainer to="/SanDiego/perform">
                                 <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
                             </LinkContainer> */}
@@ -62,12 +54,8 @@ export default function NavigationBar () {
                             </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="Houston" id="Houston">
-                            <LinkContainer to="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">
-                                <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
-                            </LinkContainer>
-                            <LinkContainer to="https://book.passkey.com/event/50552668/owner/6708/home">
-                                <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
-                            </LinkContainer>
+                                <NavDropdown.Item target='_blank' href="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">Purchase Pass</NavDropdown.Item>
+                                <NavDropdown.Item target='_blank' href="https://book.passkey.com/event/50552668/owner/6708/home">Book Hotel</NavDropdown.Item>
                             {/* <LinkContainer to="/Houston/perform">
                                 <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
                             </LinkContainer> */}

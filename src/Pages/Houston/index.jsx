@@ -6,8 +6,14 @@ import EventHomeTakeAction from "../../Components/EventHomeTakeAction";
 import EventHomePass from "../../Components/EventHomePass";
 import EventHomeTimeline from "../../Components/EventHomeTimeline";
 import { TimeLinePass } from "../../Utils/Content";
+import { useEffect } from "react";
 
 export default function HoustonHome() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     return (
         <>
             <EventHomeJumbotron containerID="hou" background={HoustonHomeContent.backgroundImage} hotelLink={HoustonHomeContent.hotelLink} logo={HoustonHomeContent.logo}/>

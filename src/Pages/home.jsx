@@ -1,11 +1,16 @@
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
-import logo from '../Assets/bigSalsaFestivalSDlogo.webp'
-import { LinkContainer } from "react-router-bootstrap";
+import logo from '../Assets/bigSalsaFestivalSDlogo.webp';
 import Button from "react-bootstrap/esm/Button";
 import HomeEventCards from "../Components/HomeEventCards";
+import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Home () {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <>
@@ -15,12 +20,12 @@ export default function Home () {
                         <Row>
                             <img src={logo} alt="logo" className="logo" width="350px"/>
                             <div className="buttonContainer">
-                                <LinkContainer to="/register">
+                                <Link target="_blank" to="/register">
                                     <Button variant="primary" size="lg" className="registerButton customBtn">Purchase Pass</Button>
-                                </LinkContainer>
-                                <LinkContainer to="/register">
+                                </Link>
+                                <Link target="_blank" to="/register">
                                     <Button variant="primary" size="lg" className="hotelButton customBtn">Book Hotel</Button>
-                                </LinkContainer>
+                                </Link>
                             </div>
                         </Row>
                     </Container>

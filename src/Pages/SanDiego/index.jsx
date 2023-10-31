@@ -6,8 +6,14 @@ import EventHomeTakeAction from "../../Components/EventHomeTakeAction";
 import EventHomePass from "../../Components/EventHomePass";
 import EventHomeTimeline from "../../Components/EventHomeTimeline";
 import { TimeLinePass } from "../../Utils/Content";
+import { useEffect } from "react";
 
 export default function SanDiegoHome() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     return (
         <>
             <EventHomeJumbotron containerID="sd" background={SanDiegoHomeContent.backgroundImage} hotelLink={SanDiegoHomeContent.hotelLink} logo={SanDiegoHomeContent.logo}/>
