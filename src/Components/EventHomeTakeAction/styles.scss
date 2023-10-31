@@ -1,0 +1,64 @@
+@import '../../Utils/mixins.scss';
+
+.takeActionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+    }
+    .cardGroup {
+        display: flex;
+        gap: 3rem;
+
+        @include smDevice {
+            flex-direction: column;
+        }
+
+        @include xsDevice {
+            flex-direction: column;
+        }
+        .action {
+            border-radius: 30px !important;
+            border: 1px solid #000;
+            gap: .5rem;
+            max-width: 311px;
+
+            img {
+                border-radius: 25px 25px 0 0 !important;
+                max-width: 311px;
+            }
+
+    
+                .contentContainer {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    width: 100%;
+                    padding: .5rem;
+                }
+    
+                .buttonContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: .5rem;
+                    width: 100%;
+                    padding: .5rem;
+
+                    a {
+                        min-width: 175px;
+                    }
+                }
+            
+        }
+    }
+}

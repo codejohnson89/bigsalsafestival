@@ -1,5 +1,3 @@
-import CardGroup from "react-bootstrap/esm/CardGroup";
-import Card from 'react-bootstrap/Card';
 import PropTypes from 'prop-types';
 import './styles.scss';
 import { TicketPerforated } from 'react-bootstrap-icons';

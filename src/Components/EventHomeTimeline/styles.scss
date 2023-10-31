@@ -13,3 +13,11 @@
         gap: 1rem;
     }
 }
+
+.timelineContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}

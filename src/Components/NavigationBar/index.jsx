@@ -22,15 +22,15 @@ export default function NavigationBar () {
                     <Navbar.Collapse id="appNavBar">
                         <Nav className="me-auto">
                         <NavDropdown title="New York" id="NewYork">
-                            <LinkContainer to="/NewYork/perform">
+                            <LinkContainer to="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">
                                 <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/NewYork/perform">
+                            <LinkContainer to="https://book.passkey.com/event/50552668/owner/6708/home">
                                 <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
                             </LinkContainer>
-                            <LinkContainer to="/NewYork/perform">
+                            {/* <LinkContainer to="/NewYork/perform">
                                 <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
-                            </LinkContainer>
+                            </LinkContainer> */}
                             <LinkContainer to="/NewYork/Perform">
                                 <NavDropdown.Item>Performer</NavDropdown.Item>
                             </LinkContainer>
@@ -42,20 +42,44 @@ export default function NavigationBar () {
                             </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="San Diego" id="SanDiego">
-                            <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Performer</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Vendors</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Volunteers</NavDropdown.Item>
+                            <LinkContainer to="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">
+                                <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="https://book.passkey.com/event/50552668/owner/6708/home">
+                                <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
+                            </LinkContainer>
+                            {/* <LinkContainer to="/SanDiego/perform">
+                                <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
+                            </LinkContainer> */}
+                            <LinkContainer to="/SanDiego/Perform">
+                                <NavDropdown.Item>Performer</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/SanDiego/Vendor">
+                                <NavDropdown.Item href="#action/3.3">Vendors</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/SanDiego/Volunteer">
+                                <NavDropdown.Item href="#action/3.3">Volunteers</NavDropdown.Item>
+                            </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="Houston" id="Houston">
-                            <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Performer</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Vendors</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Volunteers</NavDropdown.Item>
+                            <LinkContainer to="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">
+                                <NavDropdown.Item href="#action/3.1">Purchase Pass</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="https://book.passkey.com/event/50552668/owner/6708/home">
+                                <NavDropdown.Item href="#action/3.1">Book Hotel</NavDropdown.Item>
+                            </LinkContainer>
+                            {/* <LinkContainer to="/Houston/perform">
+                                <NavDropdown.Item href="#action/3.2">Schedule</NavDropdown.Item>
+                            </LinkContainer> */}
+                            <LinkContainer to="/Houston/Perform">
+                                <NavDropdown.Item>Performer</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/Houston/Vendor">
+                                <NavDropdown.Item href="#action/3.3">Vendors</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/Houston/Volunteer">
+                                <NavDropdown.Item href="#action/3.3">Volunteers</NavDropdown.Item>
+                            </LinkContainer>
                         </NavDropdown>
                         <Nav.Link href="/">Transfers</Nav.Link>
                         </Nav>

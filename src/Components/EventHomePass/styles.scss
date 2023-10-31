@@ -1,0 +1,25 @@
+.passContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    >p {
+        max-width: 600px;
+    }
+
+    .accordion {
+        min-width: 1307px;
+
+        .accordion-item {
+            .accordion-header {
+                border: 1px solid #f1f1f1;
+                button {
+                    background-color: #cfe2ff;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
