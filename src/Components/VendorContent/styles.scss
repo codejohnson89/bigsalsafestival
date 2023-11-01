@@ -1,7 +1,21 @@
+@import '../../Utils/mixins.scss';
+
 .vendorContainer {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 1.5rem;
     margin-top: 3em;
+
+    @include smDevice {
+        a {
+            margin: 0 auto;
+        }
+    }
+
+    @include xsDevice {
+        a {
+            margin: 0 auto;
+        }
+    }
 }
