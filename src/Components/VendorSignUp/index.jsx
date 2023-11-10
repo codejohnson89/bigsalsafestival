@@ -2,11 +2,29 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/esm/Button';
 import Row from 'react-bootstrap/esm/Row';
 import { useForm } from "react-hook-form";
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
+import { useRef } from 'react';
 
 
 export default function VendorSignUp() {
+
+    let location = useLocation();
+    let eventName = useRef(location.pathname.split('/')[1]);
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const submitForm = data => console.log(data);
+    const date = new Date();
+    const submitForm = (data) => {
+        // data.date = new Date();
+        console.log(data);
+        axios.post("https://sheet.best/api/sheets/d62476f3-97dc-4dde-b7d9-4a7440dd422f/tabs/Vendors", data)
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
+
     return (
         <>
             <h1>Vendor Application</h1>
@@ -15,32 +33,32 @@ export default function VendorSignUp() {
                 <Row>
                 <Form.Group className="mb-3 col-md-4" controlId="ownerFullName">
                     <Form.Label>Owner Full Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter full name" {...register('ownerFullName', {required: true})} />
+                    <Form.Control type="text" placeholder="Enter full name" {...register('OwnerFullName', {required: true})} />
                     {errors.ownerFullName && <span>This field is required</span>}
                 </Form.Group>
                 <Form.Group className="mb-3 col-md-4" controlId="companyName">
                     <Form.Label>Company Name</Form.Label>
-                    <Form.Control type="text" placeholder="Enter company name" {...register('companyName', {required: true})} />
+                    <Form.Control type="text" placeholder="Enter company name" {...register('CompanyName', {required: true})} />
                     {errors.companyName && <span>This field is required</span>}
                 </Form.Group>
                 <Form.Group className="mb-3 col-md-4" controlId="website">
                     <Form.Label>Link to Company Website</Form.Label>
-                    <Form.Control type="text" placeholder="Enter link" {...register('website')}/>
+                    <Form.Control type="text" placeholder="Enter link" {...register('Website')}/>
                 </Form.Group>
                 <Form.Group className="mb-3 col-md-4" controlId="services">
                     <Form.Label>My Product/Services</Form.Label>
-                    <Form.Check {...register('services')} value={'shoe'} type="checkbox" label="Shoe Vendor" />
-                    <Form.Check {...register('services')} value={'clothing'} type="checkbox" label="Clothing Vendor" />
-                    <Form.Check {...register('services')} value={'body suits'} type="checkbox" label="Body Suits" />
-                    <Form.Check {...register('services')} value={'leggings'} type="checkbox" label="Leggings" />
-                    <Form.Check {...register('services')} value={'costumes'} type="checkbox" label="Costumes" />
-                    <Form.Check {...register('services')} value={'shirts'} type="checkbox" label="Shirts" />
-                    <Form.Check {...register('services')} value={'massage therapy'} type="checkbox" label="Massage Therapist (service)" />
-                    <Form.Check {...register('services')} value={'massage therapy product only'} type="checkbox" label="Massage Therapist (products)" />
+                    <Form.Check {...register('Services')} value={'shoe'} type="checkbox" label="Shoe Vendor" />
+                    <Form.Check {...register('Services')} value={'clothing'} type="checkbox" label="Clothing Vendor" />
+                    <Form.Check {...register('Services')} value={'body suits'} type="checkbox" label="Body Suits" />
+                    <Form.Check {...register('Services')} value={'leggings'} type="checkbox" label="Leggings" />
+                    <Form.Check {...register('Services')} value={'costumes'} type="checkbox" label="Costumes" />
+                    <Form.Check {...register('Services')} value={'shirts'} type="checkbox" label="Shirts" />
+                    <Form.Check {...register('Services')} value={'massage therapy'} type="checkbox" label="Massage Therapist (service)" />
+                    <Form.Check {...register('Services')} value={'massage therapy product only'} type="checkbox" label="Massage Therapist (products)" />
                 </Form.Group>
                 <Form.Group className="mb-3 col-md-4" controlId="products">
                     <Form.Label>My Products are for</Form.Label>
-                    <Form.Select aria-label='products' {...register('products')}>
+                    <Form.Select aria-label='products' {...register('Products')}>
                         <option value={'male only'}>Male Only</option>
                         <option value={'female only'}>Female Only</option>
                         <option value={'both male and female'}>Both</option>
@@ -57,10 +75,12 @@ export default function VendorSignUp() {
                     </Form.Select>
                 </Form.Group>
                 <Form.Group className="mb-3 col-md-4" controlId="ownerFullName">
-                    <Form.Check {...register('accept', {required: true})} type="checkbox" label="I agree to the terms and conditions" />
+                    <Form.Check {...register('Accept', {required: true})} type="checkbox" label="I agree to the terms and conditions" />
                     {errors.accept && <span>Please accept the terms of agreement.</span>}
                 </Form.Group>
                 </Row>
+                <input hidden type="text" {...register("Date")} value={date} />
+                <input hidden type="text" {...register("Event")} value={eventName.current} />
                 <Button variant="primary" type="submit">Submit</Button>
             </Form>
         </>

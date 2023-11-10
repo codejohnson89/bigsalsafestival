@@ -3,11 +3,27 @@ import { useForm } from "react-hook-form";
 import Form from 'react-bootstrap/Form';
 import './styles.scss';
 import Button from "react-bootstrap/esm/Button";
+import axios from 'axios';
+import { useLocation } from 'react-router-dom';
+import { useRef } from "react";
 
 export default function PerformanceTeamSignUp () {
 
+    let location = useLocation();
+    let eventName = useRef(location.pathname.split('/')[1]);
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const submitForm = data => console.log(data);
+    const date = new Date();
+    const submitForm = (data) => {
+        // data.date = new Date();
+        console.log(data);
+        axios.post("https://sheet.best/api/sheets/d62476f3-97dc-4dde-b7d9-4a7440dd422f/tabs/Performers", data)
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
 
 
     return (
@@ -80,6 +96,8 @@ export default function PerformanceTeamSignUp () {
                         {errors.TOS && <span>This field is required</span>}
                     </Form.Group>
                 </Row>
+                <input hidden type="text" {...register("Date")} value={date} />
+                <input hidden type="text" {...register("Event")} value={eventName.current} />
                 <Button variant="primary" type="submit">Submit</Button>
             </Form>
         </>
