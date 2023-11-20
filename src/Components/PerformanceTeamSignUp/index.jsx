@@ -5,19 +5,32 @@ import './styles.scss';
 import Button from "react-bootstrap/esm/Button";
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import SpinnerComponent from "../Spinner";
+import SweetAlert2 from 'react-sweetalert2';
+import emailjs from '@emailjs/browser';
+
 
 export default function PerformanceTeamSignUp () {
 
+    const [loading, setLoading] = useState(false);
+    const [swalProps, setSwalProps] = useState({});
+
     let location = useLocation();
     let eventName = useRef(location.pathname.split('/')[1]);
-    const { register, handleSubmit, formState: { errors } } = useForm();
     const date = new Date();
+
+    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
     const submitForm = (data) => {
-        // data.date = new Date();
+        setLoading(!loading)
         console.log(data);
+        emailjs.sendForm('service_tunzwxx', 'template_kk8btpm', "#performanceForm", 'eE0pJXRPJa9txquj8')
         axios.post("https://sheet.best/api/sheets/d62476f3-97dc-4dde-b7d9-4a7440dd422f/tabs/Performers", data)
         .then(response => {
+            reset();
+            setSwalProps({ show: true, title: 'Success'})
+            setLoading(false)
             console.log(response);
         })
         .catch(error => {
@@ -28,7 +41,10 @@ export default function PerformanceTeamSignUp () {
 
     return (
         <>
-            <Form onSubmit={handleSubmit(submitForm)}>
+        {loading ?  <SpinnerComponent />
+        :
+        <>
+            <Form id="performanceForm" onSubmit={handleSubmit(submitForm)}>
                 <Row>
                     <Form.Group className="mb-3 col-md-4" controlId="formFullName">
                         <Form.Label>Full Name</Form.Label>
@@ -99,7 +115,15 @@ export default function PerformanceTeamSignUp () {
                 <input hidden type="text" {...register("Date")} value={date} />
                 <input hidden type="text" {...register("Event")} value={eventName.current} />
                 <Button variant="primary" type="submit">Submit</Button>
-            </Form>
+                </Form>
+                <SweetAlert2 {...swalProps}>
+                    <h1>Thank you for your submission!</h1>
+                    <p>We'll contact you shortly.</p>
+                </SweetAlert2>
+            </>
+        }
+
+
         </>
     )
 }

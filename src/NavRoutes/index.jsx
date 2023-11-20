@@ -10,6 +10,7 @@ import VolunteerSignUp from "../Pages/NewYork/Volunteer/SignUp";
 import SanDiegoHome from "../Pages/SanDiego";
 import HoustonHome from "../Pages/Houston";
 import NewYorkHome from "../Pages/NewYork";
+import SDSchedule from "../Pages/SanDiego/Schedule";
 
 export const NavRoutes = createBrowserRouter(
     createRoutesFromElements(
@@ -29,6 +30,7 @@ export const NavRoutes = createBrowserRouter(
             <Route path="/SanDiego/Vendor/SignUp" element={<VendorApplication />} />
             <Route path="/SanDiego/Volunteer" element={<Volunteer />} />
             <Route path="/SanDiego/Volunteer/SignUp" element={<VolunteerSignUp />} />
+            <Route path="/SanDiego/Schedule" element={<SDSchedule />} />
             <Route path="/Houston" element={<HoustonHome />} />
             <Route path="/Houston/Perform" element={<Perform />} />
             <Route path="/Houston/Perform/SignUp" element={<SignUp />} />

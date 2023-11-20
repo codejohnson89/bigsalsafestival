@@ -52,6 +52,9 @@ export default function NavigationBar () {
                             <LinkContainer to="/SanDiego/Volunteer">
                                 <NavDropdown.Item href="#action/3.3">Volunteers</NavDropdown.Item>
                             </LinkContainer>
+                            <LinkContainer to="/SanDiego/Schedule">
+                                <NavDropdown.Item href="#action/3.3">Schedule</NavDropdown.Item>
+                            </LinkContainer>
                         </NavDropdown>
                         <NavDropdown title="Houston" id="Houston">
                                 <NavDropdown.Item target='_blank' href="https://www.eventbrite.com/e/big-salsa-festival-new-york-2024-tickets-644949871427">Purchase Pass</NavDropdown.Item>
