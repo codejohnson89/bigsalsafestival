@@ -55,7 +55,7 @@ export default function SDSchedule() {
     return (
         <>
         
-        <Container>
+        <Container className='scheduleContainer'>
             <div className='pageHeader'>
                 <h1>BIG San Diego 2023 Workshop Schedule</h1>
             </div>
